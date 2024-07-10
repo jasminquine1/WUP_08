@@ -78,13 +78,24 @@ Adjusted $r^2$ for headlen is 0.84, this larger than adjusted $r^2$ for sex, so 
 ### Length based on headwth
 
 ```{r}
-headlenModel <- lm(LENGTH~HEADLEN,data=bears)
-plot(LENGTH~HEADLEN,data=bears)
-summary.lm(headlenModel)
+headwthModel <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+summary.lm(headwthModel)
 ```
 
+Adjusted $r^2$ for headwth is 0.53, this less than adjusted $r^2$ for headlen, so this model is not that good for the headlen model.
 
+### Length based on weight
 
+```{r}
+weighthModel <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+summary.lm(weighthModel)
+```
+
+Adjusted $r^2$ for weight is 0.74, this less than adjusted $r^2$ for headwth, so this model is not that good for the headwth model.
+
+so adjusted $r^2$ for headlen was the highest model out of all of them. 
 
 
 
