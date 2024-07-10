@@ -43,3 +43,51 @@ summary.lm(ageModel)
 
 Adjusted $r^2$ for the age model is 0.51, this less than the adjusted $r^2$ for neck, so this model is not as good as the neck model.
 
+### Length based on chest
+
+```{r}
+chestModel <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(chestModel)
+summary.lm(chestModel)
+```
+
+Adjusted $r^2$ for chest model is 0.78, this is larger than adjusted $r^2$ for age, so this model is better for the age model.  
+
+### Length based on sex 
+
+```{r}
+sexModel <- lm(LENGTH~SEX,data=bears)
+plot(LENGTH~SEX,data=bears)
+summary.lm(sexModel)
+```
+
+Adjusted $r^2$ for sex model is -0.08 this less than adjusted $r^2$ for chest, so this model is not as good for the chest model. 
+
+
+### Length based on headlen
+
+```{r}
+headlenModel <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+summary.lm(headlenModel)
+```
+
+Adjusted $r^2$ for headlen is 0.84, this larger than adjusted $r^2$ for sex, so this model is better for sex model. 
+
+### Length based on headwth
+
+```{r}
+headlenModel <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+summary.lm(headlenModel)
+```
+
+
+
+
+
+
+
+
+
